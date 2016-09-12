@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/headerfooter.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lt IE 9]>
+	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<!--header-->
+		<header class="header">
+			<section class="top_bg">
+				<div class="top w1200 clear">
+					<span class="fl">客服热线 400-888-0661</span>
+					<ul class="top_icon fl">
+						<li class="weixin">
+							<a></a>
+							<div class="ewm"><i></i><span></span><img src="img/index/ewm.jpg"></div>
+						</li>
+						<li class="sina"><a></a></li>
+					</ul>
+					<!--未登陆-->
+					<ul class="top_nav fr">
+						<li>你好，请<a href="login.html" style="padding-left:0;">登录</a></li>
+						<li><a href="regist.html">免费注册</a></li>
+						<li><a href="javascript:void(0);">积分商城</a></li>
+						<li><a href="javascript:void(0);">联系我们</a></li>
+					</ul>
+					<!--已登录-->
+					<!--<ul class="top_nav login fr">
+						<li>欢迎您：15221720156<a></a></li>
+						<li><a href="javascript:void(0);">消息（1）</a></li>
+						<li>
+							<a class="myaccount" href="javascript:void(0);">我的账户</a>
+							<div class="grxx clear">
+								<span class="grxx_l fl"><img src="img/index/tx.png"></span>
+								<span class="grxx_r fr">当前用户：<br><span id="myphone">15221720156（尛佩佩）</span><br>上次登录地址：<span id="myaddress">上海 浦东新区</span><br>上次登录时间：<span>2016.6.30 18:15</span></span>
+							</div>
+						</li>
+						<li><a href="javascript:void(0);">积分商城</a></li>
+						<li><a href="javascript:void(0);">联系我们</a></li>
+						<li><a href="javascript:void(0);">安全退出</a></li>
+					</ul>-->
+				</div>
+			</section>
+			<section class="header_main w1200">
+				<a class="logo" href="index.html"><img src="img/index/logo.png"></a>
+				<nav class="nav">
+					<a href="index.html">首页<span></span></a>
+					<a class="active" href="finance.html">我要理财<span></span></a>
+					<a href="privateProducts.html">私募产品<span></span></a>
+					<a href="insurance.html">安全保障<span></span></a>
+					<a href="problem.html">新手指引<span></span></a>
+					<a href="about.html">关于富隆<span></span></a>
+					<a href="accountOverview.html">个人中心<span></span></a>
+				</nav>
+			</section>
+		</header>
+		<!--banner-->
+		<div class="finance_banner">
+			<div class="banner_txt">
+				<h3>专注 专业！</h3>
+				<p>我们是一个有理想、有激情、有能力的团队！富隆人希望通过自身努力，能为金融与实体经济共同发展贡献我们最大的力量，惠及我们的客户与合作伙伴，创造财富，回报社会，实现中国梦，富隆世界观！</p>
+			</div>
+		</div>
+		<!--我要理财-->
+		<div class="finance">
+			<div class="w1200">
+				<h3 class="finance_tit">首页>我要理财>项目详情</h3>
+				<!--立即投资-->
+				<div class="investment">
+					<h3>GX证券-金像影视1号资产管理计划</h3>
+					<div class="investment_con clear">
+						<div class="investment_con_l">
+							<div class="touzi_shuju clear">
+								<div class="touzi_shuju1 shuju_box">
+									<p>预期收益率(年化)</p>
+									<p class="mt40"><strong>10.00<span>%</span></strong></p>
+								</div>
+								<div class="touzi_shuju2 shuju_box">
+									<p>预计投资额度</p>
+									<p class="mt50"><strong>3,000,000.00</strong> 元</p>
+								</div>
+								<div class="touzi_shuju3 shuju_box">
+									<p>预计投资期限</p>
+									<p class="mt50"><strong>8</strong> 天</p>
+								</div>
+							</div>
+							<table>
+								<tr>
+									<td width="100">认购开始时间：</td>
+									<td width="279" id="getTime">2016-08-30 16:41</td>
+									<td width="112">距认购结束时间：</td>
+									<td><span class="red" id="djs"></span></td>
+								</tr>
+								<tr>
+									<td>预计起息日：</td>
+									<td>2016-06-23</td>
+									<td>预计结息日：</td>
+									<td>2016-08-08</td>
+								</tr>
+								<tr>
+									<td>预计结算日：</td>
+									<td>2016-08-20</td>
+									<td>投资进度：</td>
+									<td><span class="jindu"><span class="jindu_jd"></span><i>60%</i></span></td>
+								</tr>
+							</table>
+							<!--认购结束倒计时-->
+							<script>
+								var timer ;
+								var otime = document.getElementById("getTime").innerHTML;
+								var iNew = new Date(otime.replace(/-/,"/")) ;
+								getTime();
+								function getTime(){
+									var iNow = new Date();
+									var t = Math.floor((iNew - iNow)/1000);
+									
+									var str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+t%60+'秒';
+									if(t>=0){
+										document.getElementById('djs').innerHTML = str;
+									}else{
+										document.getElementById('djs').innerHTML = '0天0时0秒';
+									}
+								}
+								setInterval(function(){
+									getTime();
+								},1000);
+								
+							</script>
+						</div>
+						<div class="investment_con_r">
+							<h3>投资金额</h3>
+							<p>剩余可投资金额  <strong>180,000.00</strong> 元</p>
+							<div class="tzed">
+								<span id="minus">-</span>
+								<input type="text" value="" id="tzje" maxlength="8" onkeyup="this.value=this.value.replace(/\D/g,'')">
+								<span id="plus">+</span>
+							</div>
+							<p class="zs"><span>起投金额：<i id="min_m">1000</i>元</span><span>递增金额：<i id="step_m">1000</i>元</span><span class="red">预计收益：<i>91</i>元</span><span>限投金额：<i id="max_m">100000</i>元</span></p>
+							<a class="btn" id="mstz">马上投资</a>
+						</div>
+					</div>
+				</div>
+				
+				<!--投资详情-->
+				<div class="investment_details">
+					<div class="investment_details_tit clear">
+						<ul>
+							<li class="active"><a href="javascript:void(0);">项目介绍</a></li>
+							<li><a href="javascript:void(0);">风控措施</a></li>
+							<li><a href="javascript:void(0);">项目历程</a></li>
+							<li><a href="javascript:void(0);">投资记录</a></li>
+						</ul>
+					</div>
+					<div class="investment_details_con">
+						<!--项目介绍-->
+						<div class="inves_xmjs investment_details_box" style="display:block;">
+							<h3>金像影视1号资产管理计划</h3>
+							<p>GX证券——金像影视1号资产管理计划，投资于影片的后期制作，投资人投资额300万元以上，可参加定期的剧组探班。精选最佳影视项目，仅投资优质大片，通过直投或跟投多个项目，分散投资风险。托管方为国信证券股份有限公司。投顾为上海中海投金融控股集团，承诺为本计划担保，确保投资人的本金和固定收益。 由上海富隆资产管理有限公司作为基金管理人。固定部分预期年化收益率10%，浮动部分为超额收益部分的30%。到期清算,一次性分配本金及收益。</p>
+							<h3 class="mt40">产品详情</h3>
+							<table class="product_table">
+								<tr>
+									<td class="tit">产品类型：</td>
+									<td>管理型</td>
+									<td class="tit">产品状态：</td>
+									<td>预热中</td>
+								</tr>
+								<tr>
+									<td class="tit">发行时间：</td>
+									<td>2015年11月</td>
+									<td class="tit">成立时间：</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="tit">托管人：</td>
+									<td>国信证券股份有限公司</td>
+									<td class="tit">投资顾问：</td>
+									<td>上海中海投金融控股集团</td>
+								</tr>
+								<tr>
+									<td class="tit">管理人：</td>
+									<td>上海富隆资产管理有限公司</td>
+									<td class="tit">发行规模：</td>
+									<td>2亿元人民币，满3000万元可成立</td>
+								</tr>
+								<tr>
+									<td class="tit">收益类型：</td>
+									<td>固定+浮动</td>
+									<td class="tit">收益分配方式：</td>
+									<td>固定部分每年支付一次，浮动部分到期结算一次性分配</td>
+								</tr>
+								<tr>
+									<td class="tit">投资方向：</td>
+									<td colspan="3">募集资金主要用于直投或跟投影视项目、影 视债权项目及债权转让项目、影视类计划，闲置资金可 投资现金管理类金融工具（银行存款、央行票据）及固 定收益类金融理财产品，以提高资金使用效率
+									</td>
+								</tr>
+								<tr>
+									<td class="tit">结构化比例：</td>
+									<td colspan="3">A类优先级与B类一般级之比例为4:1,普通投资人认购A类优先级,特定投资人认购B类一般级。</td>
+								</tr>
+								<tr>
+									<td class="tit">预期收益率：
+										<br/>（优先级）</td>
+									<td colspan="3">固定部分：年化收益率10%浮动部分：超额收益部分的30%</td>
+								</tr>
+								<tr>
+									<td class="tit">认购起点：</td>
+									<td colspan="3">100万元起，超出金额以10万元整数倍递增
+									</td>
+								</tr>
+								<tr>
+									<td class="tit">计划期限：</td>
+									<td colspan="3">18个月+6个月</td>
+								</tr>
+								<tr>
+									<td class="tit">资管费率：</td>
+									<td colspan="3">托管费0.15%/年 认购费1% 管理费2%/年
+										<br>
+									</td>
+								</tr>
+								<tr>
+									<td class="tit">风控措施：</td>
+									<td colspan="3">
+										<ul>
+											<li>多片种组合投资：好剧本+好导演+好演员</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td class="tit">产品特点：</td>
+									<td colspan="3">
+										<ul>
+											<li>文化产业发展迎来机遇 影视行业开启黄金十年 </li>
+											<li>国信证券对资金全程监管 </li>
+											<li>管理人实力强大、经验丰富</li>
+											<li>投顾承诺为本计划进行担保 保证投资人本金和固定收益</li>
+											<li>拟投项目均为精选优质大片，明星云集</li>
+											<li>产品结构灵活，投资项目丰富</li>
+											<li>完善的风控体系，保障资金安全</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--风控措施-->
+						<div class="inves_fkcs investment_details_box">
+							<p class="txt_c"><img src="img/finance/control_img1.jpg"></p>
+							<h3 class="mt40">资管计划投资流程</h3>
+							<p class="txt_c mt40"><img src="img/finance/control_img2.jpg"></p>
+							<h3 class="mt40">多片种组合投资</h3>
+							<p>依托投顾及管理人专业的影视项目投资、管理团队，通过对不同类型、不同档期、不同制作规模的影片投资，在保证一定影片量的基础上，追随国内及国际电影产业高增长的趋势，分散投资风险，再争取较高的回报。</p>
+							<h3>好剧本</h3>
+							<p>好的内容是影视作品成功的基石，选择具有吸引力的剧本。</p>
+							<h3>好导演</h3>
+							<p>优秀的导演和制作团队为影片的质量提供保障，选择具有优秀的过往业绩及丰富的专业经验的导演和制作团队。</p>
+							<h3>好演员</h3>
+							<p>精湛的表演是打动观众的关键，选择具有优秀的表演能力及票房号召力的好演员</p>
+						</div>
+						<!--项目历程-->
+						<div class="inves_xmlc investment_details_box">
+							<div class="line"><span class="progress_bar"></span></div>
+							<div class="project_course clear">
+								<ul>
+									<li class="course_active">
+										<span class="course01"></span>
+										<h5>项目上线</h5>
+										<p>上线时间：2016-08-30 11:20:13</p>
+									</li>
+									<li class="course_active">
+										<span class="course02"></span>
+										<h5>项目募集</h5>
+										<p>开始时间：2016-08-30 11:18:00<br>完成时间：2016-08-30 16:00:00</p>
+									</li>
+									<li class="course_active">
+										<span class="course03"></span>
+										<h5>项目成立</h5>
+										<p>成立时间：2016-08-30</p>
+									</li>
+									<li>
+										<span class="course04"></span>
+										<h5>项目还款</h5>
+										<p>还款时间：2017-01-05</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--投资记录-->
+						<div class="inves_tzjl investment_details_box">
+							<h4>最新10条，投资用户可查看所有投资记录<a>投资人数：<span>1176</span>人投资此项目</a></h4>
+							<table class="tzjl_table">
+								<thead>
+									<tr>
+										<th>投资用户</th>
+										<th>投资金额</th>
+										<th>投资时间</th>
+										<th>状态</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+									<tr>
+										<td>Y***</td>
+										<td>100000.00元</td>
+										<td>2016-01-11 10:27.03</td>
+										<td>成功</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="fenye fenye1"><a href="">上一页</a><a class="on" href=""> 1 </a><a href=""> 2 </a><a href=""> 3 </a><a href=""> ... </a><a href="">下一页</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/footer.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		
+	</body>
+</html>

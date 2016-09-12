@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="css/jqueryui.css">
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/headerfooter.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lt IE 9]>
+	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	
+	<body>
+	
+		<!--header-->
+		<header class="header">
+			<section class="top_bg">
+				<div class="top w1200 clear">
+					<span class="fl">客服热线 400-888-0661</span>
+					<ul class="top_icon fl">
+						<li class="weixin">
+							<a></a>
+							<div class="ewm"><i></i><span></span><img src="img/index/ewm.jpg"></div>
+						</li>
+						<li class="sina"><a></a></li>
+					</ul>
+					<!--未登陆-->
+					<!--<ul class="top_nav fr">
+						<li>你好，请<a href="login.html" style="padding-left:0;">登录</a></li>
+						<li><a href="regist.html">免费注册</a></li>
+						<li><a href="javascript:void(0);">积分商城</a></li>
+						<li><a href="javascript:void(0);">联系我们</a></li>
+					</ul>-->
+					<!--已登录-->
+					<ul class="top_nav login fr">
+						<li>欢迎您：15221720156<a></a></li>
+						<li><a href="javascript:void(0);">消息（1）</a></li>
+						<li>
+							<a class="myaccount" href="javascript:void(0);">我的账户</a>
+							<div class="grxx clear">
+								<span class="grxx_l fl"><img src="img/index/tx.png"></span>
+								<span class="grxx_r fr">当前用户：<br><span id="myphone">15221720156（尛佩佩）</span><br>上次登录地址：<span id="myaddress">上海 浦东新区</span><br>上次登录时间：<span>2016.6.30 18:15</span></span>
+							</div>
+						</li>
+						<li><a href="javascript:void(0);">积分商城</a></li>
+						<li><a href="javascript:void(0);">联系我们</a></li>
+						<li><a href="javascript:void(0);">安全退出</a></li>
+					</ul>
+				</div>
+			</section>
+			<section class="header_main w1200">
+				<a class="logo" href="index.html"><img src="img/index/logo.png"></a>
+				<nav class="nav">
+					<a href="index.html">首页<span></span></a>
+					<a href="finance.html">我要理财<span></span></a>
+					<a href="privateProducts.html">私募产品<span></span></a>
+					<a href="insurance.html">安全保障<span></span></a>
+					<a href="problem.html">新手指引<span></span></a>
+					<a href="about.html">关于富隆<span></span></a>
+					<a class="active" href="javascript:void(0);">个人中心<span></span></a>
+				</nav>
+			</section>
+		</header>
+		
+		<!--banner-->
+		<script src="js/personCenbanner.js"></script>
+		
+		<div class="wrap_bg">
+			<div class="wrap clear">
+				<div class="wrap_left fl">
+					<div class="wrap_left_tit pc"><h3><i></i>个人中心</h3></div>
+					<ul id="left_nav">
+						<li>
+							<h3><a href="accountOverview.html"><i class="icon iconfont icon-ewm"></i>账户总览</a></h3>
+						</li>
+						<li class="on">
+							<h3><a href="javascript:void(0);"><i class="icon iconfont icon-person"></i>个人中心</a></h3>
+							<ul>
+								<li><a href="perInformation.html">个人基本信息<i></i></a></li>
+								<li><a href="messageSetting.html">消息设置<i></i></a></li>
+								<li><a href="loglog.html">登陆日志<i></i></a></li>
+								<li class="on"><a href="safeCenter.html">安全中心<i></i></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="javascript:void(0);"><i class="icon iconfont icon-zcgl"></i>资金管理</a></h3>
+							<ul>
+								<li><a href="recharge.html">我要充值<i></i></a></li>
+								<li><a href="cash.html">我要提现<i></i></a></li>
+								<li><a href="jyrecords.html">交易记录<i></i></a></li>
+								<li><a href="bankCard.html">我的银行卡<i></i></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="javascript:void(0);"><i class="icon iconfont icon-tzgl"></i>投资管理</a></h3>
+							<ul>
+								<li><a href="tzrecords.html">投资记录<i></i></a></li>
+								<li><a href="myCollection.html">我的收藏<i></i></a></li>
+								<li><a href="paymentStatistics.html">回款统计<i></i></a></li>
+								<li><a href="touzi.html">我要投资<i></i></a></li>
+								<li><a href="licaitongji.html">理财统计<i></i></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="javascript:void(0);"><i class="icon iconfont icon-qiandai"></i>我的红包</a></h3>
+							<ul>
+								<li><a href="hongbao.html">红包<i></i></a></li>
+								<li><a href="tiyanjin.html">体验金<i></i></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="javascript:void(0);"><i class="icon iconfont icon-email"></i>站内信</a><span class="znx_icon">12</span></h3>
+							<ul>
+								<li><a href="inbox.html">收件箱<i></i></a></li>
+								<li><a href="sendingBox.html">发件箱<i></i></a></li>
+								<li><a href="written.html">写信<i></i></a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="tuicao.html"><i class="icon iconfont icon-tucao"></i>我要吐槽</a></h3>
+						</li>
+						<li>
+							<h3><a href="myPromotion.html"><i class="icon iconfont icon-tggl"></i>推广管理</a></h3>
+						</li>
+					</ul>
+				</div>
+				<div class="wrap_right fr">
+					<h3 class="tit"><i class="icon iconfont icon-person"></i> 安全中心</h3>
+					<div class="wrap_con safeCenter">
+						<div class="safeCenter_box">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="4">个人信息</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><i class="icon1"></i></td>
+										<td>实名信息</td>
+										<td>普通用户，需完成实名认证的用户才能进行投资</td>
+										<td><a id="renzheng" href="javascript:void(0);">马上认证</a></td>
+									</tr>
+									<tr>
+										<td><i class="icon2"></i></td>
+										<td>手机验证</td>
+										<td><span class="green">已验证</span> 您的验证手机：13916315044，若已丢失或停用，请立即更换，避免账户被盗</td>
+										<td><a id="modify_mobile" href="javascript:void(0);">修改手机号</a></td>
+									</tr>
+									<tr>
+										<td><i class="icon1"></i></td>
+										<td>电子邮箱</td>
+										<td><span class="red">未绑定</span> 绑定后，可使用邮箱快速登录，若手机丢失或停用，可通过邮箱。</td>
+										<td><a id="bind_emil" href="javascript:void(0);">绑定邮箱</a></td>
+									</tr>
+								</tbody>	
+							</table>
+							<table>
+								<thead>
+									<tr>
+										<th colspan="4">安全信息</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><i class="icon2"></i></td>
+										<td>登录密码</td>
+										<td><span class="green">已设置</span> 登录账户时需要输入的密码</td>
+										<td><a id="reset_password" href="javascript:void(0);">重置</a></td>
+									</tr>
+									<tr>
+										<td><i class="icon1"></i></td>
+										<td>支付密码</td>
+										<td><span class="red">未设置</span> 在账户资金变动，修改账户信息时需要输入的密码</td>
+										<td><a id="set_password" href="javascript:void(0);">设置密码</a></td>
+									</tr>
+								</tbody>	
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="box_bg"></div>
+		<!--重置登录密码1-->
+		<div class="tc_box reset_password1">
+			<a class="close"></a>
+			<h3>修改登录密码</h3>
+			<div class="tc_box_con">
+				<form id="">
+					<p class="txt_c mt20"><img src="img/personalCenter/lc1_img.jpg"></p>
+					<p class="lc_p clear"><span>验证身份</span><span>修改密码</span><span>完成修改</span></p>
+					<div class="yz mt20">
+						<label>手机号码</label>
+						<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+					</div>
+					<div class="yz">
+						<label>验证码</label>
+						<div class="yz_ipt">
+							<p><input class="ipt1 code_data" type="text" ><a class="get_code">获取验证码</a></p>
+							<span class="ts">* 请输入验证码</span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		<!--重置登录密码2-->
+		<div class="tc_box reset_password2">
+			<a class="close"></a>
+			<h3>修改登录密码</h3>
+			<div class="tc_box_con">
+				<p class="txt_c mt20"><img src="img/personalCenter/lc2_img.jpg"></p>
+				<p class="lc_p clear"><span>验证身份</span><span>修改密码</span><span>完成修改</span></p>
+				<div class="yz mt20">
+					<label>输入原始密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 请输入您的原始密码</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>输入新密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 请输入您要修改的密码</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>确认新密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 请确认新密码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h15"></div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">取消</a>
+				<a class="btn save" href="javascript:void(0);">保存</a>
+			</div>
+		</div>
+		<!--重置登录密码3-->
+		<div class="tc_box reset_password3">
+			<a class="close"></a>
+			<h3>修改登录密码</h3>
+			<div class="tc_box_con">
+				<p class="txt_c mt20"><img src="img/personalCenter/lc3_img.jpg"></p>
+				<p class="lc_p clear"><span>验证身份</span><span>修改密码</span><span>完成修改</span></p>
+				<div class="complete clear">
+					<i class="icon1 fl"></i>
+					<p class="fl mt10"><span class="green">您的密码已修改完成!</span><br><span>为保障您的账户完全，请定期修改您的密码。</span></p>
+				</div>
+			</div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">关闭</a>
+			</div>
+		</div>
+		
+		<!--修改支付密码1-->
+		<div class="tc_box modify_password1">
+			<a class="close"></a>
+			<h3>修改支付密码</h3>
+			<div class="h15"></div>
+			<div class="tc_box_con">
+				<div class="yz mt50">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>验证码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt1 code_data" type="text"><a class="get_code">获取验证码</a></p>
+						<span class="ts">* 请输入验证码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		
+		<!--修改支付密码2-->
+		<div class="tc_box modify_password2">
+			<a class="close"></a>
+			<h3>修改支付密码</h3>
+			<div class="h15"></div>
+			<div class="tc_box_con">
+				<div class="yz m30">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>旧密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 密码输入不正确</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>新密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 密码为6~16个字符(英文字母或数字，区分大小写)</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>确认密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 两次密码输入不一致，请重新输入</span>
+					</div>
+				</div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">取消</a>
+				<a class="btn save" href="javascript:void(0);">保存</a>
+			</div>
+		</div>
+		
+		<!--设置支付密码1-->
+		<div class="tc_box set_password">
+			<a class="close"></a>
+			<h3>设置支付密码</h3>
+			<div class="h15"></div>
+			<div class="tc_box_con">
+				<div class="yz mt50">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>验证码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt1" type="text"><a class="get_code">获取验证码</a></p>
+						<span class="ts">* 请输入验证码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		
+		<!--设置支付密码2-->
+		<div class="tc_box set_password">
+			<a class="close"></a>
+			<h3>设置支付密码</h3>
+			<div class="tc_box_con">
+				<div class="yz mt50">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>新密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 密码为6~16个字符(英文字母或数字，区分大小写)</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>确认密码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+						<span class="ts">* 两次密码输入不一致，请重新输入</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">取消</a>
+				<a class="btn" href="javascript:void(0);">保存</a>
+			</div>
+		</div>
+		
+		<!--更改手机号码1-->
+		<div class="tc_box modify_mobile1">
+			<a class="close"></a>
+			<h3>更改手机号码</h3>
+			<div class="h15"></div>
+			<div class="tc_box_con">
+				<div class="yz mt50">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>验证码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt1 code_data" type="text"><a class="get_code">获取验证码</a></p>
+						<span class="ts">* 请输入验证码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		
+		<!--更改手机号码2-->
+		<div class="tc_box modify_mobile2">
+			<a class="close"></a>
+			<h3>更改手机号码</h3>
+			<div class="tc_box_con">
+				<div class="yz mt50">
+					<label>原手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>新手机号码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" id="newphone" type="text"></p>
+						<span class="ts">* 请输入要更改的手机号码</span>
+					</div>
+				</div>
+				<div class="yz">
+					<label>验证码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt1 code_data" type="text"><a class="get_code">获取验证码</a></p>
+						<span class="ts">* 请输入验证码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">取消</a>
+				<a class="btn save" href="javascript:void(0);">保存</a>
+			</div>
+		</div>
+		<!--更改手机号码3-->
+		<div class="tc_box modify_mobile3">
+			<a class="close"></a>
+			<h3>更改手机号码</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<div class="complete"><i class="icon2"></i><span class="ft24">恭喜您！您修改成功！</span></div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom">
+			</div>
+		</div>
+		<!--更改电子邮箱1-->
+		<div class="tc_box reset_email1">
+			<a class="close"></a>
+			<h3>更改电子邮箱</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<p style="margin-left:116px;">如需更改电子邮箱，需验证您的手机号码</p>
+				<div class="yz">
+					<label>手机号码</label>
+					<div class="yz_ipt"><p class="lh38">15221720156</p></div>
+				</div>
+				<div class="yz">
+					<label>验证码</label>
+					<div class="yz_ipt">
+						<p><input class="ipt1 code_data" type="text" ><a class="get_code">获取验证码</a></p>
+						<span class="ts">* 请输入验证码</span>
+					</div>
+				</div>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		<!--更改电子邮箱2-->
+		<div class="tc_box reset_email2">
+			<a class="close"></a>
+			<h3>更改电子邮箱</h3>
+			<div class="h80"></div>
+			<div class="tc_box_con">
+				<form id="reset_email2">
+					<div class="yz">
+						<label>电子邮箱</label>
+						<div class="yz_ipt">
+							<p><input class="ipt2" id="cemail" name="email" type="email" required></p>
+							<span class="ts error">* 请输入要更改的电子邮箱</span>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>
+		<!--<div class="tc_box reset_email2" style="display:block;">
+			<a class="close"></a>
+			<h3>更改电子邮箱</h3>
+			<div class="h80"></div>
+			<div class="tc_box_con">
+				<form class="cmxform" id="commentForm" method="get" action="">
+					<p>
+						<label for="cemail" class="txt_r">电子邮箱</label>
+						<input id="cemail" class="ipt2" name="email" minlength="2" type="email" required>
+					</p>
+					<input class="submit" type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="h80"></div>
+			<div class="tc_box_bottom">
+				<a class="btn" href="javascript:void(0);">继续</a>
+			</div>
+		</div>-->
+		<!--更改电子邮箱3-->
+		<div class="tc_box reset_email3">
+			<a class="close"></a>
+			<h3>更改电子邮箱</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<div class="complete"><i class="icon3"></i><span class="ft24">请进入邮箱确认</span></div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom"></div>
+		</div>
+		<!--更改电子邮箱4-->
+		<div class="tc_box reset_email4">
+			<a class="close"></a>
+			<h3>更改电子邮箱</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<div class="complete"><i class="icon2"></i><span class="ft24">恭喜您！您修改成功！</span></div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom"></div>
+		</div>
+		
+		<!--实名信息认证1-->
+		<div class="tc_box sfrz_box renzheng1">
+			<a class="close"></a>
+			<h3>实名信息认证</h3>
+			<div class="smrz_con">
+				<p class="zyts">*重要提示：实名认证需要人工审核，请耐心等待。加急处理请联系客服。<a href="">如何上传？</a></p>
+				<div class="yz yz1">
+					<label><i>*</i> 真实姓名:</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+					</div>
+				</div>
+				<div class="yz yz1">
+					<label><i>*</i> 证件号码:</label>
+					<div class="yz_ipt">
+						<p><input class="ipt2" type="text"></p>
+					</div>
+				</div>
+				<div class="yz yz1">
+					<label><i>*</i> 身份证到期时间:</label>
+					<div class="yz_ipt">
+						<p>
+							<input class="ipt3" type="text" id="time">
+							<input type="radio" > 长期 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意：身份证到时期时间为身份证背面下方时间,请正确填写。
+						</p>
+					</div>
+				</div>
+				<div class="yz yz1">
+					<label style="line-height:18px;"><i>*</i> 身份证图片:</label>
+					<div class="yz_ipt">
+						<div>
+							<p>请上传以上证件的原件扫描件，证件要求：<br>证件必须是彩色原件电子版，可以是扫描件或者数码拍摄照片。<br>仅支持.jpg.bmp.png的图片格式。图片大小不超过3M。</p>
+							<div class="clear">
+								<div class="sfz_box fl">
+									<a><img src="img/sfz_icon.png"></a>
+									<p>身份证正面</p>
+								</div>
+								<div class="sfz_box fl">
+									<a><img src="img/sfz_icon.png"></a>
+									<p>身份证反面</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tc_box_bottom">
+				<a class="btn cancel" href="javascript:void(0);">取消</a>
+				<a class="btn" href="javascript:void(0);">实名认证</a>
+			</div>
+		</div>
+		<!--实名信息认证2-->
+		<div class="tc_box renzheng2">
+			<a class="close"></a>
+			<h3>实名信息认证</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<div class="complete"><i class="icon3"></i><span class="ft24">正在审核中...请耐心等候</span></div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom"></div>
+		</div>
+		<!--实名信息认证3-->
+		<div class="tc_box renzheng3">
+			<a class="close"></a>
+			<h3>实名信息认证</h3>
+			<div class="h34"></div>
+			<div class="tc_box_con">
+				<div class="complete"><i class="icon2"></i><span class="ft24">恭喜您！认证成功</span></div>
+			</div>
+			<div class="h34"></div>
+			<div class="tc_box_bottom"></div>
+		</div>
+		
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/footer.js" ></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/safecenter.js"></script>	
+		<script type="text/javascript" src="js/form_validate.js"></script>	
+		
+	</body>
+</html>
